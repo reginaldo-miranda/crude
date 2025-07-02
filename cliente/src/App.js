@@ -43,7 +43,9 @@ useEffect(()=>{
           <button className='register--button'  onClick={() => handleClickbutton()} >Cadastrar</button> 
        </div>
        {typeof listenGames !== "undefined" && listenGames.map((value) =>{
-          return <Card/>
+          return <Card key={value.id}
+          listCard={setListenGames}
+          id={value.id} name={value.name} cost={value.cost} category={value.category} />
        })}
     
     </div>
